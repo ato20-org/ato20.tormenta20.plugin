@@ -1,0 +1,505 @@
+{
+  "id": "tormenta20",
+  "nome": "Tormenta20",
+  "versao": "0.1.0",
+  "apiVersao": 10,
+  "repositorio": "https://github.com/ato20-org/ato20.tormenta20.plugin",
+  "descricao": {
+    "pt-BR": "Ensina o ATO20 a ler a ficha editável do Tormenta20 e criar o personagem a partir dela: atributos, PV e PM, perícias, habilidades, ataques e equipamento.",
+    "en": "Teaches ATO20 to read the fillable Tormenta20 sheet and build the character from it: attributes, HP and MP, skills, abilities, attacks and gear."
+  },
+  "contribui": {
+    "fichasPdf": [
+      {
+        "id": "editavel",
+        "titulo": {
+          "pt-BR": "Ficha editável do Tormenta20",
+          "en": "Tormenta20 fillable sheet"
+        },
+        "reconhecer": [
+          "NOME DO PERSONAGEM",
+          "ModFor",
+          "PMs Totais",
+          "SeleAtribDefe"
+        ],
+        "nome": "NOME DO PERSONAGEM",
+        "atributos": [
+          {
+            "sigla": "FOR",
+            "campo": "ModFor"
+          },
+          {
+            "sigla": "DES",
+            "campo": "ModDes"
+          },
+          {
+            "sigla": "CON",
+            "campo": "ModCon"
+          },
+          {
+            "sigla": "INT",
+            "campo": "ModInt"
+          },
+          {
+            "sigla": "SAB",
+            "campo": "ModSab"
+          },
+          {
+            "sigla": "CAR",
+            "campo": "ModCar"
+          }
+        ],
+        "medidores": [
+          {
+            "nome": "PV",
+            "atual": "PVs Atuais",
+            "maximo": "PVs Totais",
+            "cor": "#ef4444"
+          },
+          {
+            "nome": "PM",
+            "atual": "PMs Atuais",
+            "maximo": "PMs Totais",
+            "cor": "#3b82f6"
+          }
+        ],
+        "detalhes": [
+          {
+            "grupo": "Identidade",
+            "rotulo": "Jogador",
+            "campo": "JOGADOR"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Raça",
+            "campo": "RAÇA"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Origem",
+            "campo": "ORIGEM"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Classe",
+            "campo": "CLASSE"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Nível",
+            "campo": "Lv",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Divindade",
+            "campo": "DIVINDADE"
+          },
+          {
+            "grupo": "Identidade",
+            "rotulo": "Experiência",
+            "campo": "Exp",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Combate",
+            "rotulo": "Defesa",
+            "campo": "CA",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Combate",
+            "rotulo": "Deslocamento",
+            "campo": "Desloc"
+          },
+          {
+            "grupo": "Combate",
+            "rotulo": "Armadura",
+            "campo": "Armadura"
+          },
+          {
+            "grupo": "Combate",
+            "rotulo": "Escudo",
+            "campo": "Escudo"
+          },
+          {
+            "grupo": "Combate",
+            "rotulo": "Proficiências",
+            "descricao": "Proficiências"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Acrobacia",
+            "campo": "010",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Adestramento",
+            "campo": "020",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Atletismo",
+            "campo": "030",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Atuação",
+            "campo": "040",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Cavalgar",
+            "campo": "050",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Conhecimento",
+            "campo": "060",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Cura",
+            "campo": "070",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Diplomacia",
+            "campo": "080",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Enganação",
+            "campo": "090",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Fortitude",
+            "campo": "100",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Furtividade",
+            "campo": "110",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Guerra",
+            "campo": "120",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Iniciativa",
+            "campo": "130",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Intimidação",
+            "campo": "140",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Intuição",
+            "campo": "150",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Investigação",
+            "campo": "160",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Jogatina",
+            "campo": "170",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Ladinagem",
+            "campo": "180",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Luta",
+            "campo": "190",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Misticismo",
+            "campo": "200",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Nobreza",
+            "campo": "220",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Ofício 1",
+            "campo": "230",
+            "tipo": "numero",
+            "descricao": "Ofício 1"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Ofício 2",
+            "campo": "240",
+            "tipo": "numero",
+            "descricao": "Ofício_2"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Percepção",
+            "campo": "250",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Pilotagem",
+            "campo": "210",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Pontaria",
+            "campo": "260",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Reflexos",
+            "campo": "270",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Religião",
+            "campo": "280",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Sobrevivência",
+            "campo": "290",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Perícias",
+            "rotulo": "Vontade",
+            "campo": "300",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Habilidades",
+            "rotulo": "Raça e origem",
+            "descricao": "HabRaçasOrigem"
+          },
+          {
+            "grupo": "Habilidades",
+            "rotulo": "Classe e poderes",
+            "descricao": "HabClassePoderes"
+          },
+          {
+            "grupo": "Habilidades",
+            "rotulo": "Magias",
+            "descricao": "Magias"
+          },
+          {
+            "grupo": "Descrição",
+            "rotulo": "Descrição",
+            "descricao": "Descrição"
+          },
+          {
+            "grupo": "Descrição",
+            "rotulo": "Anotações",
+            "descricao": "Anotações"
+          },
+          {
+            "grupo": "Equipamento",
+            "rotulo": "Tibares",
+            "campo": "T",
+            "tipo": "numero"
+          },
+          {
+            "grupo": "Equipamento",
+            "rotulo": "Tibares de ouro",
+            "campo": "TO",
+            "tipo": "numero"
+          }
+        ],
+        "listas": [
+          {
+            "grupo": "Ataques",
+            "itens": [
+              {
+                "nome": "Ataque 1",
+                "campo": {
+                  "juntar": [
+                    "Bônus Atq 1",
+                    "Dano 1",
+                    "Crítico 1"
+                  ]
+                },
+                "descricao": {
+                  "juntar": [
+                    "Tipo 1",
+                    "Alcance 1"
+                  ]
+                }
+              },
+              {
+                "nome": "Ataque 2",
+                "campo": {
+                  "juntar": [
+                    "Bônus Atq 2",
+                    "Dano 2",
+                    "Crítico 2"
+                  ]
+                },
+                "descricao": {
+                  "juntar": [
+                    "Tipo 2",
+                    "Alcance 2"
+                  ]
+                }
+              },
+              {
+                "nome": "Ataque 3",
+                "campo": {
+                  "juntar": [
+                    "Bônus Atq 3",
+                    "Dano 3",
+                    "Crítico 3"
+                  ]
+                },
+                "descricao": {
+                  "juntar": [
+                    "Tipo 3",
+                    "Alcance 3"
+                  ]
+                }
+              },
+              {
+                "nome": "Ataque 4",
+                "campo": {
+                  "juntar": [
+                    "Bônus Atq 4",
+                    "Dano 4",
+                    "Crítico 4"
+                  ]
+                },
+                "descricao": {
+                  "juntar": [
+                    "Tipo 4",
+                    "Alcance 4"
+                  ]
+                }
+              },
+              {
+                "nome": "Ataque 5",
+                "campo": {
+                  "juntar": [
+                    "Bônus Atq 5",
+                    "Dano 5",
+                    "Crítico 5"
+                  ]
+                },
+                "descricao": {
+                  "juntar": [
+                    "Tipo 5",
+                    "Alcance 5"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "grupo": "Equipamento",
+            "itens": [
+              {
+                "nome": "Item1",
+                "campo": "PesoItem1"
+              },
+              {
+                "nome": "Item2",
+                "campo": "PesoItem2"
+              },
+              {
+                "nome": "Item3",
+                "campo": "PesoItem3"
+              },
+              {
+                "nome": "Item4",
+                "campo": "PesoItem4"
+              },
+              {
+                "nome": "Item5",
+                "campo": "PesoItem5"
+              },
+              {
+                "nome": "Item6",
+                "campo": "PesoItem6"
+              },
+              {
+                "nome": "Item7",
+                "campo": "PesoItem7"
+              },
+              {
+                "nome": "Item8",
+                "campo": "PesoItem8"
+              },
+              {
+                "nome": "Item9",
+                "campo": "PesoItem9"
+              },
+              {
+                "nome": "Item10",
+                "campo": "PesoItem10"
+              },
+              {
+                "nome": "Item11",
+                "campo": "PesoItem11"
+              },
+              {
+                "nome": "Item12",
+                "campo": "PesoItem12"
+              },
+              {
+                "nome": "Item13",
+                "campo": "PesoItem13"
+              },
+              {
+                "nome": "Item14",
+                "campo": "PesoItem14"
+              },
+              {
+                "nome": "Item15",
+                "campo": "PesoItem15"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
