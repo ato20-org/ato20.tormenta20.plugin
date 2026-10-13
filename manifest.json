@@ -1,9 +1,10 @@
 {
   "id": "tormenta20",
   "nome": "Tormenta20",
-  "versao": "0.1.0",
+  "versao": "0.1.1",
   "apiVersao": 10,
   "repositorio": "https://github.com/ato20-org/ato20.tormenta20.plugin",
+  "icone": "icone.png",
   "descricao": {
     "pt-BR": "Ensina o ATO20 a ler a ficha editável do Tormenta20 e criar o personagem a partir dela: atributos, PV e PM, perícias, habilidades, ataques e equipamento.",
     "en": "Teaches ATO20 to read the fillable Tormenta20 sheet and build the character from it: attributes, HP and MP, skills, abilities, attacks and gear."
