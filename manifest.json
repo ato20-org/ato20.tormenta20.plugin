@@ -1,15 +1,450 @@
 {
   "id": "tormenta20",
   "nome": "Tormenta20",
-  "versao": "0.1.1",
+  "versao": "0.2.0",
   "apiVersao": 10,
   "repositorio": "https://github.com/ato20-org/ato20.tormenta20.plugin",
   "icone": "icone.png",
   "descricao": {
-    "pt-BR": "Ensina o ATO20 a ler a ficha editável do Tormenta20 e criar o personagem a partir dela: atributos, PV e PM, perícias, habilidades, ataques e equipamento.",
-    "en": "Teaches ATO20 to read the fillable Tormenta20 sheet and build the character from it: attributes, HP and MP, skills, abilities, attacks and gear."
+    "pt-BR": "Tormenta20 no ATO20: a campanha nasce com FOR, DES, CON, INT, SAB e CAR, PV e PM, a ficha nos detalhes e as condições do jogo. E a ficha editável em PDF vira personagem, com perícias, habilidades, ataques e equipamento.",
+    "en": "Tormenta20 in ATO20: the campaign starts with FOR, DES, CON, INT, SAB and CAR, HP and MP, the sheet as details and the game's conditions. And the fillable sheet PDF becomes a character, with skills, abilities, attacks and gear."
   },
   "contribui": {
+    "sistemas": [
+      {
+        "id": "tormenta20",
+        "titulo": "Tormenta20",
+        "atributos": [
+          {
+            "sigla": "FOR",
+            "valor": 0,
+            "descricao": "Força: potência muscular, golpes corpo a corpo e carga."
+          },
+          {
+            "sigla": "DES",
+            "valor": 0,
+            "descricao": "Destreza: agilidade, reflexos, equilíbrio e pontaria."
+          },
+          {
+            "sigla": "CON",
+            "valor": 0,
+            "descricao": "Constituição: saúde, fôlego e resistência do corpo."
+          },
+          {
+            "sigla": "INT",
+            "valor": 0,
+            "descricao": "Inteligência: raciocínio, memória e estudo."
+          },
+          {
+            "sigla": "SAB",
+            "valor": 0,
+            "descricao": "Sabedoria: percepção, intuição e força de vontade."
+          },
+          {
+            "sigla": "CAR",
+            "valor": 0,
+            "descricao": "Carisma: presença, persuasão e força de personalidade."
+          }
+        ],
+        "medidores": [
+          {
+            "nome": "PV",
+            "cor": "#ef4444",
+            "estilo": "barra",
+            "maximo": 20
+          },
+          {
+            "nome": "PM",
+            "cor": "#3b82f6",
+            "estilo": "barra",
+            "maximo": 6
+          }
+        ],
+        "detalhes": {
+          "grupos": [
+            {
+              "nome": "Identidade"
+            },
+            {
+              "nome": "Combate"
+            },
+            {
+              "nome": "Perícias"
+            },
+            {
+              "nome": "Habilidades",
+              "exibicao": "lista"
+            },
+            {
+              "nome": "Ataques",
+              "exibicao": "lista"
+            },
+            {
+              "nome": "Equipamento",
+              "exibicao": "lista"
+            },
+            {
+              "nome": "Descrição",
+              "exibicao": "lista"
+            }
+          ],
+          "modelos": [
+            {
+              "grupo": "Identidade",
+              "rotulo": "Jogador"
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Raça"
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Origem"
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Classe"
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Nível",
+              "tipo": "numero",
+              "valor": 1
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Divindade"
+            },
+            {
+              "grupo": "Identidade",
+              "rotulo": "Experiência",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Combate",
+              "rotulo": "Defesa",
+              "tipo": "numero",
+              "valor": 10
+            },
+            {
+              "grupo": "Combate",
+              "rotulo": "Deslocamento",
+              "valor": "9m"
+            },
+            {
+              "grupo": "Combate",
+              "rotulo": "Armadura"
+            },
+            {
+              "grupo": "Combate",
+              "rotulo": "Escudo"
+            },
+            {
+              "grupo": "Combate",
+              "rotulo": "Proficiências"
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Acrobacia",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Adestramento",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Atletismo",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Atuação",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Cavalgar",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Conhecimento",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Cura",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Diplomacia",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Enganação",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Fortitude",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Furtividade",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Guerra",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Iniciativa",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Intimidação",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Intuição",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Investigação",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Jogatina",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Ladinagem",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Luta",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Misticismo",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Nobreza",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Ofício 1",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Ofício 2",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Percepção",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Pilotagem",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Pontaria",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Reflexos",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Religião",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Sobrevivência",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Perícias",
+              "rotulo": "Vontade",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Habilidades",
+              "rotulo": "Raça e origem"
+            },
+            {
+              "grupo": "Habilidades",
+              "rotulo": "Classe e poderes"
+            },
+            {
+              "grupo": "Habilidades",
+              "rotulo": "Magias"
+            },
+            {
+              "grupo": "Equipamento",
+              "rotulo": "Tibares",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Equipamento",
+              "rotulo": "Tibares de ouro",
+              "tipo": "numero",
+              "valor": 0
+            },
+            {
+              "grupo": "Descrição",
+              "rotulo": "Descrição"
+            },
+            {
+              "grupo": "Descrição",
+              "rotulo": "Anotações"
+            }
+          ]
+        },
+        "condicoes": [
+          {
+            "nome": "Abalado",
+            "cor": "#a855f7",
+            "icone": "medo"
+          },
+          {
+            "nome": "Apavorado",
+            "cor": "#a855f7",
+            "icone": "medo"
+          },
+          {
+            "nome": "Confuso",
+            "cor": "#a855f7",
+            "icone": "cerebro"
+          },
+          {
+            "nome": "Agarrado",
+            "cor": "#f59e0b",
+            "icone": "corrente"
+          },
+          {
+            "nome": "Atordoado",
+            "cor": "#f59e0b",
+            "icone": "estrela"
+          },
+          {
+            "nome": "Caído",
+            "cor": "#f59e0b",
+            "icone": "pegadas"
+          },
+          {
+            "nome": "Desprevenido",
+            "cor": "#f59e0b",
+            "icone": "alvo"
+          },
+          {
+            "nome": "Fatigado",
+            "cor": "#f59e0b",
+            "icone": "cama"
+          },
+          {
+            "nome": "Enredado",
+            "cor": "#84cc16",
+            "icone": "ancora"
+          },
+          {
+            "nome": "Envenenado",
+            "cor": "#22c55e",
+            "icone": "veneno",
+            "efeito": "envenenado"
+          },
+          {
+            "nome": "Sangrando",
+            "cor": "#ef4444",
+            "icone": "sangue",
+            "efeito": "sangrando"
+          },
+          {
+            "nome": "Em chamas",
+            "cor": "#f97316",
+            "icone": "chama",
+            "efeito": "chamas"
+          },
+          {
+            "nome": "Cego",
+            "cor": "#ffffff",
+            "icone": "olho-fechado"
+          },
+          {
+            "nome": "Lento",
+            "cor": "#3b82f6",
+            "icone": "ampulheta"
+          },
+          {
+            "nome": "Paralisado",
+            "cor": "#3b82f6",
+            "icone": "cadeado"
+          },
+          {
+            "nome": "Inconsciente",
+            "cor": "#3b82f6",
+            "icone": "lua"
+          }
+        ]
+      }
+    ],
     "fichasPdf": [
       {
         "id": "editavel",

@@ -1,10 +1,37 @@
 # Tormenta20 para o ATO20
 
-Plugin que ensina o ATO20 a ler a ficha editável do Tormenta20. Na lista de
-Personagens, **Importar ficha em PDF** cria o personagem a partir dela, com o
-PDF anexado como a ficha dele. É só o `manifest.json`, sem código.
+Plugin que põe Tormenta20 no ATO20, em duas partes. É só o `manifest.json`,
+sem código.
+
+- **O sistema:** ao criar a campanha (ou depois, em Configuração da campanha,
+  Sistema), ela nasce com FOR, DES, CON, INT, SAB e CAR, os medidores PV e PM,
+  a ficha nos detalhes (Identidade, Combate, as 30 perícias, Habilidades,
+  Ataques, Equipamento e Descrição) e 16 condições do jogo.
+- **A ficha em PDF:** na lista de Personagens, **Importar ficha em PDF** cria
+  o personagem a partir da ficha editável, com o PDF anexado como a ficha
+  dele. Com o sistema aplicado, tudo cai nos detalhes do molde.
 
 ![A prévia do Importar ficha em PDF, com uma ficha de exemplo do Tormenta20](docs/importar-pdf.png)
+
+## O sistema
+
+| | Começa com |
+| --- | --- |
+| Atributos | FOR, DES, CON, INT, SAB e CAR, em 0, como no Jogo do Ano |
+| Medidores | PV 20 e PM 6 |
+| Identidade | jogador, raça, origem, classe, nível 1, divindade, experiência 0 |
+| Combate | defesa 10, deslocamento 9m, armadura, escudo, proficiências |
+| Perícias | as 30 da ficha, em 0 |
+| Listas | Habilidades (raça e origem, classe e poderes, magias), Ataques, Equipamento (tibares) e Descrição (descrição, anotações) |
+| Condições | Abalado, Apavorado, Confuso, Agarrado, Atordoado, Caído, Desprevenido, Fatigado, Enredado, Envenenado, Sangrando, Em chamas, Cego, Lento, Paralisado e Inconsciente |
+
+A classe é texto, e não uma lista de opções: o personagem multiclasse escreve
+"Guerreiro 3 / Clérigo 2", como na ficha. A campanha guarda até 16 condições;
+as outras do livro o mestre acrescenta no cardápio. Envenenado, Sangrando e Em
+chamas já vêm com o efeito na figura.
+
+Aplicar junta ao que a campanha já tem: o que tiver o mesmo nome fica como o
+mestre deixou.
 
 ## A ficha
 
